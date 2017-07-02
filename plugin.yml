@@ -1,0 +1,8 @@
+name: Pro-AT
+main: cn.szzxol.pro.at.AT
+version: 1.0.0
+author: I_promise
+commands:
+   at:
+      description: AT插件命令
+      usage: /at
