@@ -1,6 +1,6 @@
 name: Pro-AT
 main: cn.szzxol.pro.at.AT
-version: 1.0.0
+version: 1.0.1
 author: I_promise
 commands:
    at:

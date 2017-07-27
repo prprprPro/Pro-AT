@@ -46,30 +46,13 @@ public class PlayerChat implements Listener {
         switch (SoundType) {
             case 1:
                 target.playSound(target.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0F, 1.0F);
-                target.sendMessage((new StringBuilder()).append(ChatColor.WHITE).append(ChatColor.BOLD).append("[@] ").append(ChatColor.AQUA).append(sender.getName()).append(ChatColor.WHITE).append(" @了你").toString());
-                break;
-
-            case 2:
-                target.playSound(target.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 1.0F, 1.0F);
-                target.sendMessage((new StringBuilder()).append(ChatColor.WHITE).append(ChatColor.BOLD).append("[@] ").append(ChatColor.AQUA).append(sender.getName()).append(ChatColor.WHITE).append(" @了你").toString());
-                break;
-
-            case 3:
-                target.playSound(target.getLocation(), Sound.ENTITY_GHAST_SCREAM, 1.0F, 1.0F);
-                target.sendMessage((new StringBuilder()).append(ChatColor.WHITE).append(ChatColor.BOLD).append("[@] ").append(ChatColor.AQUA).append(sender.getName()).append(ChatColor.WHITE).append(" @了你").toString());
-                break;
-
-            case 4:
-                target.playSound(target.getLocation(), Sound.ENTITY_FIREWORK_TWINKLE, 1.0F, 1.0F);
-                target.sendMessage((new StringBuilder()).append(ChatColor.WHITE).append(ChatColor.BOLD).append("[@] ").append(ChatColor.AQUA).append(sender.getName()).append(ChatColor.WHITE).append(" @了你").toString());
-                break;
-
-            case 5:
-                target.playSound(target.getLocation(), Sound.ENTITY_WITHER_DEATH, 1.0F, 1.0F);
+                sender.playSound(target.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0F, 1.0F);
                 target.sendMessage((new StringBuilder()).append(ChatColor.WHITE).append(ChatColor.BOLD).append("[@] ").append(ChatColor.AQUA).append(sender.getName()).append(ChatColor.WHITE).append(" @了你").toString());
                 break;
 
             default:
+                target.playSound(target.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0F, 1.0F);
+                sender.playSound(target.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0F, 1.0F);
                 target.sendMessage((new StringBuilder()).append(ChatColor.WHITE).append(ChatColor.BOLD).append("[@] ").append(ChatColor.AQUA).append(sender.getName()).append(ChatColor.WHITE).append(" @了你").toString());
                 sender.sendMessage((new StringBuilder()).append(ChatColor.AQUA).append(ChatColor.BOLD).append("【Pro-@】").append(ChatColor.RED).append(ChatColor.BOLD).append("插件配置有误！").toString());
                 break;
